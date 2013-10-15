@@ -1,4 +1,10 @@
 <h1><%= @quiz.title %></h1>
 <% @quiz.questions.each do |question| %>
-  <%= question.query %>
+  <h3><%= question.query %></h3>
+
+  <ol class='answers'>
+  <% question.answers.each do |answer| %>
+    <%= content_tag :li, answer.response %>
+  <% end %>
+  </ol>
 <% end %>

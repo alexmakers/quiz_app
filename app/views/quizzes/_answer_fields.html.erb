@@ -1,0 +1,6 @@
+<br><%= f.fields_for :answers do |answer_f| %>
+  <%= answer_f.label :response, 'Answer' %>
+  <%= answer_f.text_field :response %>
+  <%= answer_f.label :response, 'Correct?' %>
+  <%= answer_f.check_box :correctness %><br>
+<% end %>
