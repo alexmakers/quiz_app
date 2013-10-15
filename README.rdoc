@@ -26,3 +26,13 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+  def self.check(guesses)
+    correct = []
+
+    guesses.each do |q_id, a_id|
+      correct << Answer.where(id: a_id, question_id: q_id, correctness: true)
+    end
+    correct.compact
+  end

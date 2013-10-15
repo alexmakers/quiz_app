@@ -1,5 +1,7 @@
 class QuizzesController < ApplicationController
 
+  before_filter :authenticate_user!, only: [:new, :create]
+
   def index
     @quizzes = Quiz.all
   end

@@ -17,6 +17,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'websocket-rails'
 
+gem 'devise'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -28,6 +30,8 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+gem 'permitters'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
