@@ -37,6 +37,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'capybara'
   gem 'shoulda'
+  gem 'factory_girl_rails'
 end
 
 group :doc do
