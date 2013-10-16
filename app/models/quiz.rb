@@ -12,4 +12,8 @@ class Quiz < ActiveRecord::Base
     end
   end
 
+  def correct_answer_ids
+    questions.map { |q| q.correct_answer.id }
+  end
+
 end

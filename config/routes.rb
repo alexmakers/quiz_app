@@ -1,7 +1,9 @@
 QuizApp::Application.routes.draw do
   
   devise_for :users
-  resources :quizzes
+  resources :quizzes do
+    resources :attempts, only: [:new, :create, :show]
+  end
   root :to => "quizzes#index"
 
   # get '/quizzes' => 'quiz#index'
