@@ -1,0 +1,23 @@
+<div class='multiplayer'>
+
+  <div class='timer'>
+  </div>
+  
+  <% @quiz.questions.each do |question| %>
+
+    <div class='question'>
+
+      <h4><%= question.query %></h4>
+
+      <% question.answers.each do |answer| %>
+
+        <button data-question-id="<%= question.id %>" data-id="<%= answer.id %>">
+          <%= answer.response %>
+        </button>
+
+      <% end %>
+
+    </div>
+
+  <% end %>
+</div>

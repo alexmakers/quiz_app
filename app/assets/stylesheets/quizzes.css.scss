@@ -19,3 +19,11 @@ input[type=submit] {
 .highlight {
   background: yellow;
 }
+
+.multiplayer .question {
+  display: none;
+}
+
+.multiplayer .question.active {
+  display: block;
+}

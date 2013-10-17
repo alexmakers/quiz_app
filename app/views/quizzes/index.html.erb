@@ -1,5 +1,5 @@
 <% @quizzes.each do |quiz| %>
-  <h3><%= link_to quiz.title, quiz %></h3>
+  <h3><%= link_to quiz.title, new_quiz_attempt_path(quiz) %></h3>
 <% end %>
 
 <% if @quizzes.empty? %>

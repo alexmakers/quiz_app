@@ -1,10 +1,13 @@
 QuizApp::Application.routes.draw do
   
+  get "multiplayer_attempts/index"
   devise_for :users
   resources :quizzes do
     resources :attempts, only: [:new, :create, :show]
+    resources :multiplayer_attempts, only: [:new]
   end
   root :to => "quizzes#index"
+  post '/multiplayer_attempts/check_answer' => 'multiplayer_attempts#check_answer'
 
   # get '/quizzes' => 'quiz#index'
   # post '/quizzes' => 'quiz#create'
