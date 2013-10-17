@@ -9,6 +9,7 @@ class MultiplayerAttemptsController < ApplicationController
 
     question = Question.find question_id
     answer = question.answers.find answer_id
+    WebsocketRails[:answers].trigger 'new', {correct: answer.correctness}
     render json: {correct: answer.correctness}
   end
 end
